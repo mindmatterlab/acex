@@ -2,7 +2,7 @@
 # Makefile helper functions for generate necessary files
 #
 
-SERVICES ?= $(filter-out tools,$(foreach service,$(wildcard ${GOPRO_ROOT}/cmd/*),$(notdir ${service})))
+SERVICES ?= $(filter-out tools gen-gopro-gorm-model,$(foreach service,$(wildcard ${GOPRO_ROOT}/cmd/*),$(notdir ${service})))
 
 .PHONY: gen.protoc
 gen.protoc: ## Generate go source files from protobuf files.
