@@ -5,18 +5,18 @@ import (
 	utilerrors "k8s.io/apimachinery/pkg/util/errors"
 	cliflag "k8s.io/component-base/cli/flag"
 
-	"github.com/mindmatterlab/go-pro/internal/pkg/client"
-	"github.com/mindmatterlab/go-pro/internal/pkg/feature"
-	known "github.com/mindmatterlab/go-pro/internal/pkg/known/usercenter"
-	"github.com/mindmatterlab/go-pro/internal/usercenter"
-	"github.com/mindmatterlab/go-pro/pkg/app"
-	"github.com/mindmatterlab/go-pro/pkg/log"
-	genericoptions "github.com/mindmatterlab/go-pro/pkg/options"
+	"github.com/mindmatterlab/acex/internal/pkg/client"
+	"github.com/mindmatterlab/acex/internal/pkg/feature"
+	known "github.com/mindmatterlab/acex/internal/pkg/known/usercenter"
+	"github.com/mindmatterlab/acex/internal/usercenter"
+	"github.com/mindmatterlab/acex/pkg/app"
+	"github.com/mindmatterlab/acex/pkg/log"
+	genericoptions "github.com/mindmatterlab/acex/pkg/options"
 )
 
 const (
-	// UserAgent is the userAgent name when starting gopro-gateway server.
-	UserAgent = "gopro-usercenter"
+	// UserAgent is the userAgent name when starting acex-gateway server.
+	UserAgent = "acex-usercenter"
 )
 
 var _ app.CliOptions = (*Options)(nil)
@@ -128,7 +128,7 @@ func (o *Options) Validate() error {
 	return utilerrors.NewAggregate(errs)
 }
 
-// ApplyTo fills up gopro-usercenter config with options.
+// ApplyTo fills up acex-usercenter config with options.
 func (o *Options) ApplyTo(c *usercenter.Config) error {
 	c.GRPCOptions = o.GRPCOptions
 	c.HTTPOptions = o.HTTPOptions
@@ -143,7 +143,7 @@ func (o *Options) ApplyTo(c *usercenter.Config) error {
 	return nil
 }
 
-// Config return an gopro-usercenter config object.
+// Config return an acex-usercenter config object.
 func (o *Options) Config() (*usercenter.Config, error) {
 	c := &usercenter.Config{}
 

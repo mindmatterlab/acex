@@ -1,18 +1,18 @@
 package auth
 
-//go:generate mockgen -self_package github.com/mindmatterlab/go-pro/internal/usercenter/biz/auth -destination mock_auth.go -package auth github.com/mindmatterlab/go-pro/internal/usercenter/biz/auth AuthBiz
+//go:generate mockgen -self_package github.com/mindmatterlab/acex/internal/usercenter/biz/auth -destination mock_auth.go -package auth github.com/mindmatterlab/acex/internal/usercenter/biz/auth AuthBiz
 
 import (
 	"context"
 
-	"github.com/mindmatterlab/go-pro/internal/pkg/gcontext"
-	"github.com/mindmatterlab/go-pro/internal/usercenter/auth"
-	"github.com/mindmatterlab/go-pro/internal/usercenter/locales"
-	"github.com/mindmatterlab/go-pro/internal/usercenter/store"
-	v1 "github.com/mindmatterlab/go-pro/pkg/api/usercenter/v1"
-	"github.com/mindmatterlab/go-pro/pkg/authn"
-	"github.com/mindmatterlab/go-pro/pkg/i18n"
-	"github.com/mindmatterlab/go-pro/pkg/log"
+	"github.com/mindmatterlab/acex/internal/pkg/acexx"
+	"github.com/mindmatterlab/acex/internal/usercenter/auth"
+	"github.com/mindmatterlab/acex/internal/usercenter/locales"
+	"github.com/mindmatterlab/acex/internal/usercenter/store"
+	v1 "github.com/mindmatterlab/acex/pkg/api/usercenter/v1"
+	"github.com/mindmatterlab/acex/pkg/authn"
+	"github.com/mindmatterlab/acex/pkg/i18n"
+	"github.com/mindmatterlab/acex/pkg/log"
 )
 
 // AuthBiz defines functions used for authentication and authorization.
@@ -93,7 +93,7 @@ func (b *authBiz) Login(ctx context.Context, rq *v1.LoginRequest) (*v1.LoginRepl
 
 // Logout invalidates a token.
 func (b *authBiz) Logout(ctx context.Context, rq *v1.LogoutRequest) error {
-	if err := b.authn.Destroy(ctx, gcontext.FromAccessToken(ctx)); err != nil {
+	if err := b.authn.Destroy(ctx, acexx.FromAccessToken(ctx)); err != nil {
 		log.C(ctx).Errorw(err, "Failed to remove token from cache")
 		return err
 	}
@@ -104,9 +104,9 @@ func (b *authBiz) Logout(ctx context.Context, rq *v1.LogoutRequest) error {
 // RefreshToken refreshes an existing token and returns a new one.
 func (b *authBiz) RefreshToken(ctx context.Context, rq *v1.RefreshTokenRequest) (*v1.LoginReply, error) {
 	// Because a new token is issued, the old token needs to be destroyed.
-	_ = b.authn.Destroy(ctx, gcontext.FromAccessToken(ctx))
+	_ = b.authn.Destroy(ctx, acexx.FromAccessToken(ctx))
 
-	userID := gcontext.FromUserID(ctx)
+	userID := acexx.FromUserID(ctx)
 	refreshToken, err := b.authn.Sign(ctx, userID)
 	if err != nil {
 		log.C(ctx).Errorw(err, "Failed to generate refresh token")

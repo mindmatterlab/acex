@@ -10,12 +10,12 @@ import (
 	lru "github.com/hashicorp/golang-lru"
 	"gorm.io/gorm"
 
-	known "github.com/mindmatterlab/go-pro/internal/pkg/known/usercenter"
-	"github.com/mindmatterlab/go-pro/internal/usercenter/model"
-	v1 "github.com/mindmatterlab/go-pro/pkg/api/usercenter/v1"
-	"github.com/mindmatterlab/go-pro/pkg/authn"
-	jwtauthn "github.com/mindmatterlab/go-pro/pkg/authn/jwt"
-	"github.com/mindmatterlab/go-pro/pkg/log"
+	known "github.com/mindmatterlab/acex/internal/pkg/known/usercenter"
+	"github.com/mindmatterlab/acex/internal/usercenter/model"
+	v1 "github.com/mindmatterlab/acex/pkg/api/usercenter/v1"
+	"github.com/mindmatterlab/acex/pkg/authn"
+	jwtauthn "github.com/mindmatterlab/acex/pkg/authn/jwt"
+	"github.com/mindmatterlab/acex/pkg/log"
 )
 
 const (
@@ -79,7 +79,7 @@ func (a *authnImpl) Sign(ctx context.Context, userID string) (authn.IToken, erro
 
 	opts := []jwtauthn.Option{
 		jwtauthn.WithSigningMethod(jwt.SigningMethodHS512),
-		jwtauthn.WithIssuer("gopro-usercenter"),
+		jwtauthn.WithIssuer("acex-usercenter"),
 		jwtauthn.WithTokenHeader(map[string]any{"kid": secret.SecretID}),
 		jwtauthn.WithExpired(known.AccessTokenExpire),
 		jwtauthn.WithSigningKey([]byte(secret.SecretKey)),

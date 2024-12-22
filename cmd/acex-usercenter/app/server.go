@@ -3,9 +3,9 @@ package app
 import (
 	genericapiserver "k8s.io/apiserver/pkg/server"
 
-	"github.com/mindmatterlab/go-pro/cmd/gopro-usercenter/app/options"
-	"github.com/mindmatterlab/go-pro/internal/usercenter"
-	"github.com/mindmatterlab/go-pro/pkg/app"
+	"github.com/mindmatterlab/acex/cmd/acex-usercenter/app/options"
+	"github.com/mindmatterlab/acex/internal/usercenter"
+	"github.com/mindmatterlab/acex/pkg/app"
 )
 
 // Define the description of the command.
@@ -14,7 +14,7 @@ const commandDesc = `The usercenter server is used to manage users, keys, fees, 
 // NewApp creates and returns a new App object with default parameters.
 func NewApp(name string) *app.App {
 	opts := options.NewOptions()
-	application := app.NewApp(name, "Launch a gopro usercenter server",
+	application := app.NewApp(name, "Launch a acex usercenter server",
 		app.WithDescription(commandDesc),
 		app.WithOptions(opts),
 		app.WithDefaultValidArgs(),

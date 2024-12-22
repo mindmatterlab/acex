@@ -8,8 +8,8 @@ import (
 	"github.com/golang-jwt/jwt/v4"
 	goi18n "github.com/nicksnyder/go-i18n/v2/i18n"
 
-	"github.com/mindmatterlab/go-pro/pkg/authn"
-	"github.com/mindmatterlab/go-pro/pkg/i18n"
+	"github.com/mindmatterlab/acex/pkg/authn"
+	"github.com/mindmatterlab/acex/pkg/i18n"
 )
 
 const (

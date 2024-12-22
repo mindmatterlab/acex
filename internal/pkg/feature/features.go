@@ -26,13 +26,13 @@ const (
 )
 
 func init() {
-	// runtime.Must(utilfeature.DefaultMutableFeatureGate.Add(defaultGoProFeatureGates))
-	runtime.Must(DefaultMutableFeatureGate.Add(defaultGoProFeatureGates))
+	// runtime.Must(utilfeature.DefaultMutableFeatureGate.Add(defaultAcexFeatureGates))
+	runtime.Must(DefaultMutableFeatureGate.Add(defaultAcexFeatureGates))
 }
 
-// defaultGoProFeatureGates consists of all known gopro-specific feature keys.
+// defaultAcexFeatureGates consists of all known acex-specific feature keys.
 // To add a new feature, define a key for it above and add it here.
-var defaultGoProFeatureGates = map[featuregate.Feature]featuregate.FeatureSpec{
+var defaultAcexFeatureGates = map[featuregate.Feature]featuregate.FeatureSpec{
 	// Every feature should be initiated here:
 	MachinePool: {Default: false, PreRelease: featuregate.Alpha},
 	// ClusterResourceSet:             {Default: true, PreRelease: featuregate.Beta},

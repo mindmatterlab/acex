@@ -6,16 +6,16 @@ GO := go
 # Minimum supported go version.
 GO_MINIMUM_VERSION ?= 1.22
 
-CMD_DIRS := $(wildcard $(GOPRO_ROOT)/cmd/*)
+CMD_DIRS := $(wildcard $(ACEX_ROOT)/cmd/*)
 # Filter out directories without Go files, as these directories cannot be compiled.
 COMMANDS := $(filter-out $(wildcard %.md), $(foreach dir, $(CMD_DIRS), $(if $(wildcard $(dir)/*.go), $(dir),)))
 BINS ?= $(foreach cmd,${COMMANDS},$(notdir ${cmd}))
 
 ifeq (${COMMANDS},)
-  $(error Could not determine COMMANDS, set GOPRO_ROOT or run in source dir)
+  $(error Could not determine COMMANDS, set ACEX_ROOT or run in source dir)
 endif
 ifeq (${BINS},)
-  $(error Could not determine BINS, set GOPRO_ROOT or run in source dir)
+  $(error Could not determine BINS, set ACEX_ROOT or run in source dir)
 endif
 
 .PHONY: go.build.verify
@@ -30,10 +30,10 @@ go.build.%: ## Build specified applications with platform, os and arch.
 	$(eval PLATFORM := $(word 1,$(subst ., ,$*)))
 	$(eval OS := $(word 1,$(subst _, ,$(PLATFORM))))
 	$(eval ARCH := $(word 2,$(subst _, ,$(PLATFORM))))
-	@if grep -q "func main()" $(GOPRO_ROOT)/cmd/$(COMMAND)/*.go &>/dev/null; then \
+	@if grep -q "func main()" $(ACEX_ROOT)/cmd/$(COMMAND)/*.go &>/dev/null; then \
 		echo "===========> Building binary $(COMMAND) $(VERSION) for $(OS) $(ARCH)" ; \
 		CGO_ENABLED=0 GOOS=$(OS) GOARCH=$(ARCH) $(GO) build $(GO_BUILD_FLAGS) \
-		-o $(OUTPUT_DIR)/platforms/$(OS)/$(ARCH)/$(COMMAND)$(GO_OUT_EXT) $(GOPRO_SRC_PATH)/cmd/$(COMMAND) ; \
+		-o $(OUTPUT_DIR)/platforms/$(OS)/$(ARCH)/$(COMMAND)$(GO_OUT_EXT) $(ACEX_SRC_PATH)/cmd/$(COMMAND) ; \
 	fi
 
 .PHONY: go.build

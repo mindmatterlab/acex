@@ -4,8 +4,8 @@ import (
 	"github.com/google/uuid"
 	"gorm.io/gorm"
 
-	"github.com/mindmatterlab/go-pro/internal/pkg/zid"
-	"github.com/mindmatterlab/go-pro/pkg/authn"
+	"github.com/mindmatterlab/acex/internal/pkg/zid"
+	"github.com/mindmatterlab/acex/pkg/authn"
 )
 
 // User status constants.
@@ -23,7 +23,7 @@ const (
 // BeforeCreate runs before creating a SecretM database record and initializes various fields.
 func (s *SecretM) BeforeCreate(tx *gorm.DB) (err error) {
 	// Supports custom SecretKey, but users need to ensure the uniqueness of the SecretKey themselves.
-	// gopro-cacheserver will use this feature to set secret.
+	// acex-cacheserver will use this feature to set secret.
 	if s.SecretID == "" {
 		// Generate a new UUID for SecretKey.
 		s.SecretID = uuid.New().String()

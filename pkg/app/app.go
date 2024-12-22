@@ -13,9 +13,9 @@ import (
 	cliflag "k8s.io/component-base/cli/flag"
 	"k8s.io/component-base/term"
 
-	"github.com/mindmatterlab/go-pro/pkg/log"
-	genericoptions "github.com/mindmatterlab/go-pro/pkg/options"
-	"github.com/mindmatterlab/go-pro/pkg/version"
+	"github.com/mindmatterlab/acex/pkg/log"
+	genericoptions "github.com/mindmatterlab/acex/pkg/options"
+	"github.com/mindmatterlab/acex/pkg/version"
 )
 
 // App is the main structure of a cli application.

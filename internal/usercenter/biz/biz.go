@@ -1,16 +1,16 @@
 package biz
 
-//go:generate mockgen -self_package github.com/mindmatterlab/go-pro/internal/usercenter/biz -destination mock_biz.go -package biz github.com/mindmatterlab/go-pro/internal/usercenter/biz IBiz
+//go:generate mockgen -self_package github.com/mindmatterlab/acex/internal/usercenter/biz -destination mock_biz.go -package biz github.com/mindmatterlab/acex/internal/usercenter/biz IBiz
 
 import (
 	"github.com/google/wire"
 
-	"github.com/mindmatterlab/go-pro/internal/usercenter/auth"
-	authbiz "github.com/mindmatterlab/go-pro/internal/usercenter/biz/auth"
-	"github.com/mindmatterlab/go-pro/internal/usercenter/biz/secret"
-	"github.com/mindmatterlab/go-pro/internal/usercenter/biz/user"
-	"github.com/mindmatterlab/go-pro/internal/usercenter/store"
-	"github.com/mindmatterlab/go-pro/pkg/authn"
+	"github.com/mindmatterlab/acex/internal/usercenter/auth"
+	authbiz "github.com/mindmatterlab/acex/internal/usercenter/biz/auth"
+	"github.com/mindmatterlab/acex/internal/usercenter/biz/secret"
+	"github.com/mindmatterlab/acex/internal/usercenter/biz/user"
+	"github.com/mindmatterlab/acex/internal/usercenter/store"
+	"github.com/mindmatterlab/acex/pkg/authn"
 )
 
 // ProviderSet contains providers for creating instances of the biz struct.

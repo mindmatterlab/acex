@@ -6,7 +6,7 @@ import (
 	"github.com/spf13/pflag"
 	"gorm.io/gen"
 
-	"github.com/mindmatterlab/go-pro/pkg/db"
+	"github.com/mindmatterlab/acex/pkg/db"
 )
 
 const helpText = `Usage: main [flags] arg [arg...]
@@ -22,10 +22,10 @@ type Querier interface {
 }
 
 var (
-	addr     = pflag.StringP("address", "a", "127.0.0.1:3306", "MySQL host address.")
-	username = pflag.StringP("username", "u", "goprouser", "Username to connect to the database.")
-	password = pflag.StringP("password", "p", "gopro(!%)999", "Password to use when connecting to the database.")
-	dbname   = pflag.StringP("db", "d", "gopro", "Database name to connect to.")
+	addr     = pflag.StringP("address", "a", "127.0.0.1:33306", "MySQL host address.")
+	username = pflag.StringP("username", "u", "acexuser", "Username to connect to the database.")
+	password = pflag.StringP("password", "p", "acex(!%)999", "Password to use when connecting to the database.")
+	dbname   = pflag.StringP("db", "d", "acex", "Database name to connect to.")
 
 	// outPath   = pflag.String("outpath", "./store", "generated gorm query code's path.").
 	modelPath = pflag.String("model-pkg-path", "./model", "Generated model code's package name.")

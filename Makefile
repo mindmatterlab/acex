@@ -11,7 +11,7 @@ define USAGE_OPTIONS
 \033[35mOptions:\033[0m
   BINS             The binaries to build. Default is all of cmd.
                    This option is available when using: make build/build.multiarch
-                   Example: make build BINS="gopro-apiserver gopro-miner-controller"
+                   Example: make build BINS="acex-apiserver acex-miner-controller"
 endef
 export USAGE_OPTIONS
 

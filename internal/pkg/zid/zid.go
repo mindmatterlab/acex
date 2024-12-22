@@ -1,7 +1,7 @@
 package zid
 
 import (
-	"github.com/mindmatterlab/go-pro/pkg/id"
+	"github.com/mindmatterlab/acex/pkg/id"
 )
 
 const defaultABC = "abcdefghijklmnopqrstuvwxyz1234567890"
@@ -9,9 +9,9 @@ const defaultABC = "abcdefghijklmnopqrstuvwxyz1234567890"
 type ZID string
 
 const (
-	// ID for the user resource in gopro-usercenter.
+	// ID for the user resource in acex-usercenter.
 	User ZID = "user"
-	// ID for the order resource in gopro-fakeserver.
+	// ID for the order resource in acex-fakeserver.
 	Order ZID = "order"
 )
 

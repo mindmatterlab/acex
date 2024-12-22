@@ -8,7 +8,7 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/spf13/pflag"
 
-	"github.com/mindmatterlab/go-pro/pkg/log"
+	"github.com/mindmatterlab/acex/pkg/log"
 )
 
 var _ IOptions = (*HealthOptions)(nil)

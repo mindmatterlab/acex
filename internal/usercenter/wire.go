@@ -11,16 +11,16 @@ import (
 	"github.com/go-kratos/kratos/v2"
 	"github.com/google/wire"
 
-	"github.com/mindmatterlab/go-pro/internal/pkg/bootstrap"
-	"github.com/mindmatterlab/go-pro/internal/pkg/validation"
-	"github.com/mindmatterlab/go-pro/internal/usercenter/auth"
-	"github.com/mindmatterlab/go-pro/internal/usercenter/biz"
-	"github.com/mindmatterlab/go-pro/internal/usercenter/server"
-	"github.com/mindmatterlab/go-pro/internal/usercenter/service"
-	"github.com/mindmatterlab/go-pro/internal/usercenter/store"
-	customvalidation "github.com/mindmatterlab/go-pro/internal/usercenter/validation"
-	"github.com/mindmatterlab/go-pro/pkg/db"
-	genericoptions "github.com/mindmatterlab/go-pro/pkg/options"
+	"github.com/mindmatterlab/acex/internal/pkg/bootstrap"
+	"github.com/mindmatterlab/acex/internal/pkg/validation"
+	"github.com/mindmatterlab/acex/internal/usercenter/auth"
+	"github.com/mindmatterlab/acex/internal/usercenter/biz"
+	"github.com/mindmatterlab/acex/internal/usercenter/server"
+	"github.com/mindmatterlab/acex/internal/usercenter/service"
+	"github.com/mindmatterlab/acex/internal/usercenter/store"
+	customvalidation "github.com/mindmatterlab/acex/internal/usercenter/validation"
+	"github.com/mindmatterlab/acex/pkg/db"
+	genericoptions "github.com/mindmatterlab/acex/pkg/options"
 )
 
 // wireApp builds and returns a Kratos app with the given options.

@@ -1,6 +1,6 @@
 package store
 
-//go:generate mockgen -self_package github.com/mindmatterlab/go-pro/internal/usercenter/store -destination mock_store.go -package store github.com/mindmatterlab/go-pro/internal/usercenter/store IStore,SecretStore,UserStore
+//go:generate mockgen -self_package github.com/mindmatterlab/acex/internal/usercenter/store -destination mock_store.go -package store github.com/mindmatterlab/acex/internal/usercenter/store IStore,SecretStore,UserStore
 
 import (
 	"context"

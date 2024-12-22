@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Log an error but keep going.  Don't dump the stack or exit.
-function gopro::log::error() {
+function acex::log::error() {
   timestamp=$(date +"[%m%d %H:%M:%S]")
   echo "!!! ${timestamp} ${1-}" >&2
   shift

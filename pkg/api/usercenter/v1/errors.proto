@@ -4,7 +4,7 @@ package usercenter.v1;
 
 import "errors/errors.proto";
 
-option go_package = "github.com/mindmatterlab/go-pro/pkg/api/usercenter/v1;v1";
+option go_package = "github.com/mindmatterlab/acex/pkg/api/usercenter/v1;v1";
 
 enum ErrorReason {
   option (errors.default_code) = 500;

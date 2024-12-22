@@ -12,8 +12,8 @@ import (
 	"github.com/redis/go-redis/v9"
 	"gorm.io/gorm"
 
-	"github.com/mindmatterlab/go-pro/pkg/log"
-	genericoptions "github.com/mindmatterlab/go-pro/pkg/options"
+	"github.com/mindmatterlab/acex/pkg/log"
+	genericoptions "github.com/mindmatterlab/acex/pkg/options"
 )
 
 const (

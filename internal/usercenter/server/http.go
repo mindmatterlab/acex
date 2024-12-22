@@ -10,10 +10,10 @@ import (
 	"github.com/gorilla/handlers"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 
-	"github.com/mindmatterlab/go-pro/internal/pkg/pprof"
-	"github.com/mindmatterlab/go-pro/internal/usercenter/service"
-	v1 "github.com/mindmatterlab/go-pro/pkg/api/usercenter/v1"
-	"github.com/mindmatterlab/go-pro/pkg/authn"
+	"github.com/mindmatterlab/acex/internal/pkg/pprof"
+	"github.com/mindmatterlab/acex/internal/usercenter/service"
+	v1 "github.com/mindmatterlab/acex/pkg/api/usercenter/v1"
+	"github.com/mindmatterlab/acex/pkg/authn"
 )
 
 func NewWhiteListMatcher() selector.MatchFunc {

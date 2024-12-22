@@ -5,8 +5,8 @@ import (
 
 	emptypb "google.golang.org/protobuf/types/known/emptypb"
 
-	v1 "github.com/mindmatterlab/go-pro/pkg/api/usercenter/v1"
-	"github.com/mindmatterlab/go-pro/pkg/log"
+	v1 "github.com/mindmatterlab/acex/pkg/api/usercenter/v1"
+	"github.com/mindmatterlab/acex/pkg/log"
 )
 
 // CreateUser receives a CreateUserRequest and creates a new user record in the datastore.

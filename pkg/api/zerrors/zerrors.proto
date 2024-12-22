@@ -4,7 +4,7 @@ package zerrors;
 
 import "errors/errors.proto";
 
-option go_package = "github.com/mindmatterlab/go-pro/pkg/api/zerrors;zerrors";
+option go_package = "github.com/mindmatterlab/acex/pkg/api/zerrors;zerrors";
 
 enum ErrorReason {
   option (errors.default_code) = 500;

@@ -1,12 +1,12 @@
 package secret
 
-//go:generate mockgen -self_package github.com/mindmatterlab/go-pro/internal/usercenter/biz/secret -destination mock_secret.go -package secret github.com/mindmatterlab/go-pro/internal/usercenter/biz/secret SecretBiz
+//go:generate mockgen -self_package github.com/mindmatterlab/acex/internal/usercenter/biz/secret -destination mock_secret.go -package secret github.com/mindmatterlab/acex/internal/usercenter/biz/secret SecretBiz
 
 import (
 	"context"
 
-	"github.com/mindmatterlab/go-pro/internal/usercenter/store"
-	v1 "github.com/mindmatterlab/go-pro/pkg/api/usercenter/v1"
+	"github.com/mindmatterlab/acex/internal/usercenter/store"
+	v1 "github.com/mindmatterlab/acex/pkg/api/usercenter/v1"
 )
 
 // SecretBiz defines functions used to handle secret rquest.

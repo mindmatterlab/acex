@@ -7,8 +7,8 @@ import (
 	"gorm.io/gorm"
 	gormlogger "gorm.io/gorm/logger"
 
-	"github.com/mindmatterlab/go-pro/pkg/db"
-	"github.com/mindmatterlab/go-pro/pkg/log"
+	"github.com/mindmatterlab/acex/pkg/db"
+	"github.com/mindmatterlab/acex/pkg/log"
 )
 
 var _ IOptions = (*MySQLOptions)(nil)
@@ -29,9 +29,9 @@ type MySQLOptions struct {
 func NewMySQLOptions() *MySQLOptions {
 	return &MySQLOptions{
 		Host:                  "127.0.0.1:3306",
-		Username:              "gopro",
-		Password:              "gopro(!%)999",
-		Database:              "gopro",
+		Username:              "acex",
+		Password:              "acex(!%)999",
+		Database:              "acex",
 		MaxIdleConnections:    100,
 		MaxOpenConnections:    100,
 		MaxConnectionLifeTime: time.Duration(10) * time.Second,

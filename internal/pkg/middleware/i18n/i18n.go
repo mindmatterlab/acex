@@ -8,7 +8,7 @@ import (
 	"golang.org/x/text/language"
 	"google.golang.org/grpc/metadata"
 
-	"github.com/mindmatterlab/go-pro/pkg/i18n"
+	"github.com/mindmatterlab/acex/pkg/i18n"
 )
 
 func Translator(options ...func(*i18n.Options)) middleware.Middleware {

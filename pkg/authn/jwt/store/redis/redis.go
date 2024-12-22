@@ -26,7 +26,7 @@ type Store struct {
 
 // NewStore create an *Store instance to handle token storage, deletion, and checking.
 func NewStore(cfg *Config) *Store {
-	// The reason `github.com/mindmatterlab/go-pro/pkg/db` is not used here is
+	// The reason `github.com/mindmatterlab/acex/pkg/db` is not used here is
 	// to minimize dependencies, and use `github.com/redis/go-redis/v9` to
 	// create redis client is not complex.
 	cli := redis.NewClient(&redis.Options{

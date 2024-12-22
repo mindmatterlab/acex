@@ -1,13 +1,13 @@
 package auth
 
-//go:generate mockgen -self_package github.com/mindmatterlab/go-pro/internal/usercenter/auth -destination mock_auth.go -package auth github.com/mindmatterlab/go-pro/internal/usercenter/auth AuthProvider,AuthzInterface,AuthnInterface
+//go:generate mockgen -self_package github.com/mindmatterlab/acex/internal/usercenter/auth -destination mock_auth.go -package auth github.com/mindmatterlab/acex/internal/usercenter/auth AuthProvider,AuthzInterface,AuthnInterface
 
 import (
 	"context"
 
 	"github.com/google/wire"
 
-	"github.com/mindmatterlab/go-pro/pkg/authn"
+	"github.com/mindmatterlab/acex/pkg/authn"
 )
 
 // ProviderSet is a Wire provider set that creates a new instance of auth.

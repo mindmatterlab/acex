@@ -3,17 +3,17 @@ package user
 import (
 	"context"
 
-	"github.com/mindmatterlab/go-pro/internal/pkg/gcontext"
-	validationutil "github.com/mindmatterlab/go-pro/internal/pkg/util/validation"
-	v1 "github.com/mindmatterlab/go-pro/pkg/api/usercenter/v1"
-	"github.com/mindmatterlab/go-pro/pkg/authn"
+	"github.com/mindmatterlab/acex/internal/pkg/acexx"
+	validationutil "github.com/mindmatterlab/acex/internal/pkg/util/validation"
+	v1 "github.com/mindmatterlab/acex/pkg/api/usercenter/v1"
+	"github.com/mindmatterlab/acex/pkg/authn"
 )
 
 // Update updates a user's information in the database.
 func (b *userBiz) Update(ctx context.Context, rq *v1.UpdateUserRequest) error {
 	filters := map[string]any{"username": rq.Username}
-	if !validationutil.IsAdminUser(gcontext.FromUserID(ctx)) {
-		filters["user_id"] = gcontext.FromUserID(ctx)
+	if !validationutil.IsAdminUser(acexx.FromUserID(ctx)) {
+		filters["user_id"] = acexx.FromUserID(ctx)
 	}
 
 	userM, err := b.ds.Users().Fetch(ctx, filters)
@@ -38,7 +38,7 @@ func (b *userBiz) Update(ctx context.Context, rq *v1.UpdateUserRequest) error {
 // Note that after updating the password, if the JWT Token has not expired, it can
 // still be accessed through the token, the token is not deleted synchronously here.
 func (b *userBiz) UpdatePassword(ctx context.Context, rq *v1.UpdatePasswordRequest) error {
-	userM, err := b.ds.Users().Get(ctx, gcontext.FromUserID(ctx), rq.Username)
+	userM, err := b.ds.Users().Get(ctx, acexx.FromUserID(ctx), rq.Username)
 	if err != nil {
 		return err
 	}

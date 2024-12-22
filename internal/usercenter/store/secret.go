@@ -6,9 +6,9 @@ import (
 
 	"gorm.io/gorm"
 
-	known "github.com/mindmatterlab/go-pro/internal/pkg/known/usercenter"
-	"github.com/mindmatterlab/go-pro/internal/pkg/meta"
-	"github.com/mindmatterlab/go-pro/internal/usercenter/model"
+	known "github.com/mindmatterlab/acex/internal/pkg/known/usercenter"
+	"github.com/mindmatterlab/acex/internal/pkg/meta"
+	"github.com/mindmatterlab/acex/internal/usercenter/model"
 )
 
 // SecretStore defines the secret storage interface, containing methods

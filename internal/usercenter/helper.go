@@ -3,10 +3,10 @@ package usercenter
 import (
 	"github.com/golang-jwt/jwt/v4"
 
-	"github.com/mindmatterlab/go-pro/pkg/authn"
-	jwtauthn "github.com/mindmatterlab/go-pro/pkg/authn/jwt"
-	"github.com/mindmatterlab/go-pro/pkg/authn/jwt/store/redis"
-	genericoptions "github.com/mindmatterlab/go-pro/pkg/options"
+	"github.com/mindmatterlab/acex/pkg/authn"
+	jwtauthn "github.com/mindmatterlab/acex/pkg/authn/jwt"
+	"github.com/mindmatterlab/acex/pkg/authn/jwt/store/redis"
+	genericoptions "github.com/mindmatterlab/acex/pkg/options"
 )
 
 // NewAuthenticator creates a new JWT-based Authenticator using the provided JWT and Redis options.
@@ -14,7 +14,7 @@ func NewAuthenticator(jwtOpts *genericoptions.JWTOptions, redisOpts *genericopti
 	// Create a list of options for jwtauthn.
 	opts := []jwtauthn.Option{
 		// Specify the issuer of the token
-		jwtauthn.WithIssuer("gopro-usercenter"),
+		jwtauthn.WithIssuer("acex-usercenter"),
 		// Specify the default expiration time for the token to be issued
 		jwtauthn.WithExpired(jwtOpts.Expired),
 		// Specify the key to be used when issuing the token

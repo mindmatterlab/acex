@@ -7,7 +7,7 @@ import (
 	consulapi "github.com/hashicorp/consul/api"
 	clientv3 "go.etcd.io/etcd/client/v3"
 
-	genericoptions "github.com/mindmatterlab/go-pro/pkg/options"
+	genericoptions "github.com/mindmatterlab/acex/pkg/options"
 )
 
 func NewEtcdRegistrar(opts *genericoptions.EtcdOptions) registry.Registrar {

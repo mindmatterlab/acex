@@ -10,7 +10,7 @@ import (
 
 // Define global options for all clients.
 var (
-	UserAgent  = "gopro"
+	UserAgent  = "acex"
 	Debug      = false
 	RetryCount = 3
 	Timeout    = 30 * time.Second

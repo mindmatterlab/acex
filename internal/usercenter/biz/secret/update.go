@@ -3,13 +3,13 @@ package secret
 import (
 	"context"
 
-	"github.com/mindmatterlab/go-pro/internal/pkg/gcontext"
-	v1 "github.com/mindmatterlab/go-pro/pkg/api/usercenter/v1"
+	"github.com/mindmatterlab/acex/internal/pkg/acexx"
+	v1 "github.com/mindmatterlab/acex/pkg/api/usercenter/v1"
 )
 
 // Update updates a secret.
 func (b *secretBiz) Update(ctx context.Context, rq *v1.UpdateSecretRequest) error {
-	secret, err := b.ds.Secrets().Get(ctx, gcontext.FromUserID(ctx), rq.Name)
+	secret, err := b.ds.Secrets().Get(ctx, acexx.FromUserID(ctx), rq.Name)
 	if err != nil {
 		return err
 	}

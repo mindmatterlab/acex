@@ -2,12 +2,12 @@ package known
 
 const (
 	// This exposes compute information based on the miner type.
-	CPUAnnotation    = "apps.go-pro.io/vCPU"
-	MemoryAnnotation = "apps.go-pro.io/memoryMb"
+	CPUAnnotation    = "apps.acex.io/vCPU"
+	MemoryAnnotation = "apps.acex.io/memoryMb"
 )
 
 const (
-	SkipVerifyAnnotation = "apps.go-pro.io/skip-verify"
+	SkipVerifyAnnotation = "apps.acex.io/skip-verify"
 )
 
 var AllImmutableAnnotations = []string{

@@ -11,5 +11,5 @@ const (
 )
 
 const (
-	TemporaryKeyName = "_go-pro.io/temporary_key"
+	TemporaryKeyName = "_acex.io/temporary_key"
 )

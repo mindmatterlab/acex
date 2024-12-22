@@ -1,4 +1,4 @@
-// Package log is a log package used by go-pro project.
+// Package log is a log package used by acex project.
 //
 //nolint:interfacebloat
 package log
@@ -15,7 +15,7 @@ import (
 
 type Field = zapcore.Field
 
-// Logger 定义了 go-pro 项目的日志接口. 该接口只包含了支持的日志记录方法.
+// Logger 定义了 acex 项目的日志接口. 该接口只包含了支持的日志记录方法.
 type Logger interface {
 	Debugf(format string, args ...any)
 	Debugw(msg string, keyvals ...any)

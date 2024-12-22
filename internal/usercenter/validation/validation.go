@@ -6,13 +6,13 @@ import (
 
 	"github.com/google/wire"
 
-	"github.com/mindmatterlab/go-pro/internal/pkg/gcontext"
-	"github.com/mindmatterlab/go-pro/internal/pkg/known"
-	ucknown "github.com/mindmatterlab/go-pro/internal/pkg/known/usercenter"
-	"github.com/mindmatterlab/go-pro/internal/usercenter/locales"
-	"github.com/mindmatterlab/go-pro/internal/usercenter/store"
-	v1 "github.com/mindmatterlab/go-pro/pkg/api/usercenter/v1"
-	"github.com/mindmatterlab/go-pro/pkg/i18n"
+	"github.com/mindmatterlab/acex/internal/pkg/acexx"
+	"github.com/mindmatterlab/acex/internal/pkg/known"
+	ucknown "github.com/mindmatterlab/acex/internal/pkg/known/usercenter"
+	"github.com/mindmatterlab/acex/internal/usercenter/locales"
+	"github.com/mindmatterlab/acex/internal/usercenter/store"
+	v1 "github.com/mindmatterlab/acex/pkg/api/usercenter/v1"
+	"github.com/mindmatterlab/acex/pkg/i18n"
 )
 
 // ProviderSet is validator providers.
@@ -45,7 +45,7 @@ func (vd *validator) ValidateCreateUserRequest(ctx context.Context, rq *v1.Creat
 // ValidateListUserRequest validates the rquest to list users.
 // Ensures that only a user with the AdminUserID can view the list of users, otherwise returning an error.
 func (vd *validator) ValidateListUserRequest(ctx context.Context, rq *v1.ListUserRequest) error {
-	if userID := gcontext.FromUserID(ctx); userID != known.AdminUserID {
+	if userID := acexx.FromUserID(ctx); userID != known.AdminUserID {
 		return i18n.FromContext(ctx).E(locales.UserListUnauthorized)
 	}
 
@@ -55,7 +55,7 @@ func (vd *validator) ValidateListUserRequest(ctx context.Context, rq *v1.ListUse
 // ValidateCreateSecretRequest validates the rquest to create a secret.
 // Returns an error if the maximum number of secrets is reached.
 func (vd *validator) ValidateCreateSecretRequest(ctx context.Context, rq *v1.CreateSecretRequest) error {
-	_, secrets, err := vd.ds.Secrets().List(ctx, gcontext.FromUserID(ctx))
+	_, secrets, err := vd.ds.Secrets().List(ctx, acexx.FromUserID(ctx))
 	if err != nil {
 		return err
 	}

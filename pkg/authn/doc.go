@@ -1,1 +1,1 @@
-package authn // import "github.com/mindmatterlab/go-pro/pkg/authn"
+package authn // import "github.com/mindmatterlab/acex/pkg/authn"

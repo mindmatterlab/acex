@@ -13,12 +13,12 @@ import (
 	"k8s.io/apimachinery/pkg/util/validation/field"
 	netutils "k8s.io/utils/net"
 
-	"github.com/mindmatterlab/go-pro/internal/pkg/known"
+	"github.com/mindmatterlab/acex/internal/pkg/known"
 )
 
 const (
 	DNSName              string = `^([a-zA-Z0-9_]{1}[a-zA-Z0-9_-]{0,62}){1}(\.[a-zA-Z0-9_]{1}[a-zA-Z0-9_-]{0,62})*[\._]?$`
-	SkipVerifyAnnotation        = "gopro.io/skip-verify"
+	SkipVerifyAnnotation        = "acex.io/skip-verify"
 )
 
 var rxDNSName = regexp.MustCompile(DNSName)

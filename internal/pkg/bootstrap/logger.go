@@ -3,7 +3,7 @@ package bootstrap
 import (
 	krtlog "github.com/go-kratos/kratos/v2/log"
 
-	"github.com/mindmatterlab/go-pro/pkg/log"
+	"github.com/mindmatterlab/acex/pkg/log"
 )
 
 func NewLogger(info AppInfo) krtlog.Logger {

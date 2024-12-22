@@ -10,7 +10,7 @@ import (
 
 // Define unit constant.
 const (
-	_   = iota // ignore gopro.iota
+	_   = iota // ignore acex.iota
 	KiB = 1 << (10 * iota)
 	MiB
 	GiB

@@ -3,8 +3,8 @@ package service
 import (
 	"github.com/google/wire"
 
-	"github.com/mindmatterlab/go-pro/internal/usercenter/biz"
-	v1 "github.com/mindmatterlab/go-pro/pkg/api/usercenter/v1"
+	"github.com/mindmatterlab/acex/internal/usercenter/biz"
+	v1 "github.com/mindmatterlab/acex/pkg/api/usercenter/v1"
 )
 
 // ProviderSet is a set of service providers, used for dependency injection.

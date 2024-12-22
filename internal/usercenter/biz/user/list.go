@@ -10,9 +10,9 @@ import (
 	"golang.org/x/sync/errgroup"
 	"google.golang.org/protobuf/types/known/timestamppb"
 
-	"github.com/mindmatterlab/go-pro/internal/pkg/meta"
-	v1 "github.com/mindmatterlab/go-pro/pkg/api/usercenter/v1"
-	"github.com/mindmatterlab/go-pro/pkg/log"
+	"github.com/mindmatterlab/acex/internal/pkg/meta"
+	v1 "github.com/mindmatterlab/acex/pkg/api/usercenter/v1"
+	"github.com/mindmatterlab/acex/pkg/log"
 )
 
 // List retrieves a list of all users from the database.

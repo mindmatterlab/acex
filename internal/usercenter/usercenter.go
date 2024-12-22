@@ -6,17 +6,17 @@ import (
 	"github.com/go-kratos/kratos/v2"
 	"github.com/jinzhu/copier"
 
-	"github.com/mindmatterlab/go-pro/internal/pkg/bootstrap"
-	"github.com/mindmatterlab/go-pro/internal/usercenter/server"
-	"github.com/mindmatterlab/go-pro/pkg/db"
-	"github.com/mindmatterlab/go-pro/pkg/log"
-	genericoptions "github.com/mindmatterlab/go-pro/pkg/options"
-	"github.com/mindmatterlab/go-pro/pkg/version"
+	"github.com/mindmatterlab/acex/internal/pkg/bootstrap"
+	"github.com/mindmatterlab/acex/internal/usercenter/server"
+	"github.com/mindmatterlab/acex/pkg/db"
+	"github.com/mindmatterlab/acex/pkg/log"
+	genericoptions "github.com/mindmatterlab/acex/pkg/options"
+	"github.com/mindmatterlab/acex/pkg/version"
 )
 
 var (
 	// Name is the name of the compiled software.
-	Name = "gopro-usercenter"
+	Name = "acex-usercenter"
 
 	// ID contains the host name and any error encountered during the retrieval.
 	ID, _ = os.Hostname()

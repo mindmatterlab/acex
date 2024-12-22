@@ -3,13 +3,13 @@ package secret
 import (
 	"context"
 
-	"github.com/mindmatterlab/go-pro/internal/pkg/gcontext"
-	v1 "github.com/mindmatterlab/go-pro/pkg/api/usercenter/v1"
+	"github.com/mindmatterlab/acex/internal/pkg/acexx"
+	v1 "github.com/mindmatterlab/acex/pkg/api/usercenter/v1"
 )
 
 // List returns a list of secrets.
 func (b *secretBiz) List(ctx context.Context, rq *v1.ListSecretRequest) (*v1.ListSecretResponse, error) {
-	count, list, err := b.ds.Secrets().List(ctx, gcontext.FromUserID(ctx))
+	count, list, err := b.ds.Secrets().List(ctx, acexx.FromUserID(ctx))
 	if err != nil {
 		return nil, err
 	}

@@ -4,8 +4,8 @@ import (
 	"github.com/jinzhu/copier"
 	"google.golang.org/protobuf/types/known/timestamppb"
 
-	"github.com/mindmatterlab/go-pro/internal/usercenter/model"
-	v1 "github.com/mindmatterlab/go-pro/pkg/api/usercenter/v1"
+	"github.com/mindmatterlab/acex/internal/usercenter/model"
+	v1 "github.com/mindmatterlab/acex/pkg/api/usercenter/v1"
 )
 
 // ModelToReply converts a model.SecretM to a v1.SecretReply. It copies the data from

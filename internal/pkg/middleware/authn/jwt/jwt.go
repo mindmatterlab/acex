@@ -9,9 +9,9 @@ import (
 	"github.com/go-kratos/kratos/v2/middleware"
 	"github.com/go-kratos/kratos/v2/transport"
 
-	"github.com/mindmatterlab/go-pro/internal/pkg/gcontext"
-	"github.com/mindmatterlab/go-pro/pkg/authn"
-	"github.com/mindmatterlab/go-pro/pkg/log"
+	"github.com/mindmatterlab/acex/internal/pkg/acexx"
+	"github.com/mindmatterlab/acex/pkg/authn"
+	"github.com/mindmatterlab/acex/pkg/log"
 )
 
 const (
@@ -49,9 +49,9 @@ func Server(a authn.Authenticator) middleware.Middleware {
 					return nil, err
 				}
 
-				ctx = gcontext.NewContext(ctx, claims)
-				ctx = gcontext.NewUserID(ctx, claims.Subject)
-				ctx = gcontext.NewAccessToken(ctx, accessToken)
+				ctx = acexx.NewContext(ctx, claims)
+				ctx = acexx.NewUserID(ctx, claims.Subject)
+				ctx = acexx.NewAccessToken(ctx, accessToken)
 				ctx = log.WithContext(ctx, "user.id", claims.Subject)
 				return handler(ctx, rq)
 			}

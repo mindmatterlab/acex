@@ -5,13 +5,13 @@ import (
 
 	"github.com/google/wire"
 
-	known "github.com/mindmatterlab/go-pro/internal/pkg/known/usercenter"
-	"github.com/mindmatterlab/go-pro/internal/usercenter/auth"
-	"github.com/mindmatterlab/go-pro/internal/usercenter/model"
+	known "github.com/mindmatterlab/acex/internal/pkg/known/usercenter"
+	"github.com/mindmatterlab/acex/internal/usercenter/auth"
+	"github.com/mindmatterlab/acex/internal/usercenter/model"
 )
 
 // secretSetter is an implementation of the
-// `github.com/mindmatterlab/go-pro/internal/usercenter/auth.TemporarySecretSetter` interface. It used to set
+// `github.com/mindmatterlab/acex/internal/usercenter/auth.TemporarySecretSetter` interface. It used to set
 // a temporary key for a user. Each user has only one temporary key.
 type secretSetter struct {
 	ds *datastore

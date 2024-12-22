@@ -6,7 +6,7 @@ import (
 	"github.com/go-kratos/kratos/v2/errors"
 	"github.com/go-kratos/kratos/v2/middleware"
 
-	"github.com/mindmatterlab/go-pro/pkg/api/zerrors"
+	"github.com/mindmatterlab/acex/pkg/api/zerrors"
 )
 
 type validator interface {

@@ -6,8 +6,8 @@ import (
 
 	"gorm.io/gorm"
 
-	"github.com/mindmatterlab/go-pro/internal/pkg/meta"
-	"github.com/mindmatterlab/go-pro/internal/usercenter/model"
+	"github.com/mindmatterlab/acex/internal/pkg/meta"
+	"github.com/mindmatterlab/acex/internal/usercenter/model"
 )
 
 // UserStore defines the interface for managing user data storage.

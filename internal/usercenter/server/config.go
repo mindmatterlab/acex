@@ -1,7 +1,7 @@
 package server
 
 import (
-	genericoptions "github.com/mindmatterlab/go-pro/pkg/options"
+	genericoptions "github.com/mindmatterlab/acex/pkg/options"
 )
 
 // Config represents the configuration options for a service, including HTTP, GRPC, and TLS settings.

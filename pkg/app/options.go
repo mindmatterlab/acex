@@ -12,7 +12,7 @@ import (
 	"k8s.io/client-go/util/homedir"
 	cliflag "k8s.io/component-base/cli/flag"
 
-	"github.com/mindmatterlab/go-pro/pkg/log"
+	"github.com/mindmatterlab/acex/pkg/log"
 )
 
 const configFlagName = "config"

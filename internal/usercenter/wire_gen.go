@@ -8,16 +8,16 @@ package usercenter
 
 import (
 	"github.com/go-kratos/kratos/v2"
-	"github.com/mindmatterlab/go-pro/internal/pkg/bootstrap"
-	validation2 "github.com/mindmatterlab/go-pro/internal/pkg/validation"
-	"github.com/mindmatterlab/go-pro/internal/usercenter/auth"
-	"github.com/mindmatterlab/go-pro/internal/usercenter/biz"
-	"github.com/mindmatterlab/go-pro/internal/usercenter/server"
-	"github.com/mindmatterlab/go-pro/internal/usercenter/service"
-	"github.com/mindmatterlab/go-pro/internal/usercenter/store"
-	"github.com/mindmatterlab/go-pro/internal/usercenter/validation"
-	"github.com/mindmatterlab/go-pro/pkg/db"
-	"github.com/mindmatterlab/go-pro/pkg/options"
+	"github.com/mindmatterlab/acex/internal/pkg/bootstrap"
+	validation2 "github.com/mindmatterlab/acex/internal/pkg/validation"
+	"github.com/mindmatterlab/acex/internal/usercenter/auth"
+	"github.com/mindmatterlab/acex/internal/usercenter/biz"
+	"github.com/mindmatterlab/acex/internal/usercenter/server"
+	"github.com/mindmatterlab/acex/internal/usercenter/service"
+	"github.com/mindmatterlab/acex/internal/usercenter/store"
+	"github.com/mindmatterlab/acex/internal/usercenter/validation"
+	"github.com/mindmatterlab/acex/pkg/db"
+	"github.com/mindmatterlab/acex/pkg/options"
 )
 
 // Injectors from wire.go:

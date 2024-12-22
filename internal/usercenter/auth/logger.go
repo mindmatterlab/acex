@@ -10,8 +10,8 @@ import (
 	"github.com/google/wire"
 	"github.com/segmentio/kafka-go"
 
-	"github.com/mindmatterlab/go-pro/pkg/log"
-	genericoptions "github.com/mindmatterlab/go-pro/pkg/options"
+	"github.com/mindmatterlab/acex/pkg/log"
+	genericoptions "github.com/mindmatterlab/acex/pkg/options"
 )
 
 // LoggerProviderSet defines a wire set for creating a kafkaLogger instance to implement log.Logger interface.

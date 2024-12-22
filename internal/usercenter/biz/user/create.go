@@ -6,8 +6,8 @@ import (
 
 	"github.com/jinzhu/copier"
 
-	"github.com/mindmatterlab/go-pro/internal/usercenter/model"
-	v1 "github.com/mindmatterlab/go-pro/pkg/api/usercenter/v1"
+	"github.com/mindmatterlab/acex/internal/usercenter/model"
+	v1 "github.com/mindmatterlab/acex/pkg/api/usercenter/v1"
 )
 
 // Create creates a new user and stores it in the database.

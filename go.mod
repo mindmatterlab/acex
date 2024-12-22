@@ -1,4 +1,4 @@
-module github.com/mindmatterlab/go-pro
+module github.com/mindmatterlab/acex
 
 go 1.22.3
 

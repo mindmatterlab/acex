@@ -1,12 +1,12 @@
 package user
 
-//go:generate mockgen -self_package github.com/mindmatterlab/go-pro/internal/usercenter/biz/user -destination mock_user.go -package user github.com/mindmatterlab/go-pro/internal/usercenter/biz/user UserBiz
+//go:generate mockgen -self_package github.com/mindmatterlab/acex/internal/usercenter/biz/user -destination mock_user.go -package user github.com/mindmatterlab/acex/internal/usercenter/biz/user UserBiz
 
 import (
 	"context"
 
-	"github.com/mindmatterlab/go-pro/internal/usercenter/store"
-	v1 "github.com/mindmatterlab/go-pro/pkg/api/usercenter/v1"
+	"github.com/mindmatterlab/acex/internal/usercenter/store"
+	v1 "github.com/mindmatterlab/acex/pkg/api/usercenter/v1"
 )
 
 // UserBiz defines methods used to handle user request.

@@ -1,1 +1,1 @@
-package strings // import "github.com/mindmatterlab/go-pro/internal/pkg/util/strings"
+package strings // import "github.com/mindmatterlab/acex/internal/pkg/util/strings"

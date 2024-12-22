@@ -7,6 +7,6 @@ set -eEuo pipefail
 unset CDPATH
 
 # This will canonicalize the path
-GOPRO_ROOT=$(cd "$(dirname "${BASH_SOURCE[0]}")"/.. && pwd -P)
+ACEX_ROOT=$(cd "$(dirname "${BASH_SOURCE[0]}")"/.. && pwd -P)
 
-source "${GOPRO_ROOT}/scripts/lib/init.sh"
+source "${ACEX_ROOT}/scripts/lib/init.sh"

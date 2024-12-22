@@ -4,8 +4,8 @@ import (
 	"github.com/go-kratos/kratos/v2/middleware"
 	"github.com/go-kratos/kratos/v2/transport/grpc"
 
-	"github.com/mindmatterlab/go-pro/internal/usercenter/service"
-	v1 "github.com/mindmatterlab/go-pro/pkg/api/usercenter/v1"
+	"github.com/mindmatterlab/acex/internal/usercenter/service"
+	v1 "github.com/mindmatterlab/acex/pkg/api/usercenter/v1"
 )
 
 // NewGRPCServer creates a new gRPC server with middleware options, and registers the UserCenterService.

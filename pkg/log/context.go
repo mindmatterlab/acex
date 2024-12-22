@@ -8,7 +8,7 @@ import (
 	"go.uber.org/zap"
 )
 
-const loggerKeyForGin = "GoProLogger"
+const loggerKeyForGin = "AcexLogger"
 
 // contextKey is how we find Loggers in a context.Context.
 type contextKey struct{}

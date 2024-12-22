@@ -2,13 +2,13 @@
 # Makefile helper functions for generate necessary files
 #
 
-SERVICES ?= $(filter-out tools gen-gopro-gorm-model,$(foreach service,$(wildcard ${GOPRO_ROOT}/cmd/*),$(notdir ${service})))
+SERVICES ?= $(filter-out tools gen-acex-gorm-model,$(foreach service,$(wildcard ${ACEX_ROOT}/cmd/*),$(notdir ${service})))
 
 .PHONY: gen.protoc
 gen.protoc: ## Generate go source files from protobuf files.
 	@protoc \
 		--proto_path=$(APIROOT) \
-		--proto_path=$(GOPRO_ROOT)/third_party \
+		--proto_path=$(ACEX_ROOT)/third_party \
 		--go_out=paths=source_relative:$(APIROOT) \
 		--go-http_out=paths=source_relative:$(APIROOT) \
 		--go-grpc_out=paths=source_relative:$(APIROOT) \
@@ -21,12 +21,12 @@ gen.appconfig: $(addprefix gen.appconfig., $(SERVICES)) ## Generate all applicat
 
 .PHONY: gen.appconfig.%
 gen.appconfig.%: ## Generate specified application configuration file.
-	$(eval GOPRO_ENV_FILE ?= $(MANIFESTS_DIR)/env.local)
+	$(eval ACEX_ENV_FILE ?= $(MANIFESTS_DIR)/env.local)
 	$(eval GENERATED_SERVICE_DIR := $(OUTPUT_DIR)/appconfig)
 	$(eval SERVICE := $(lastword $(subst ., ,$*)))
 	@echo "===========> Generating $(SERVICE) configuration file"
-	@$(SCRIPTS_DIR)/gen-service-config.sh $(SERVICE) $(GOPRO_ENV_FILE) \
-		$(GOPRO_ROOT)/configs/appconfig/$(SERVICE).config.tmpl.yaml $(GENERATED_SERVICE_DIR)
+	@$(SCRIPTS_DIR)/gen-service-config.sh $(SERVICE) $(ACEX_ENV_FILE) \
+		$(ACEX_ROOT)/configs/appconfig/$(SERVICE).config.tmpl.yaml $(GENERATED_SERVICE_DIR)
 ifeq ($(V),1)
 	echo "DBG: Generating $(SERVICE) application configuration file at $(GENERATED_SERVICE_DIR)/$(SERVICE)"
 endif

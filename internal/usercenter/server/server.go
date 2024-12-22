@@ -18,16 +18,16 @@ import (
 	"github.com/google/wire"
 	"golang.org/x/text/language"
 
-	gmetrics "github.com/mindmatterlab/go-pro/internal/pkg/metrics"
-	"github.com/mindmatterlab/go-pro/internal/pkg/middleware/authn/jwt"
-	i18nmw "github.com/mindmatterlab/go-pro/internal/pkg/middleware/i18n"
-	"github.com/mindmatterlab/go-pro/internal/pkg/middleware/logging"
-	"github.com/mindmatterlab/go-pro/internal/pkg/middleware/tracing"
-	"github.com/mindmatterlab/go-pro/internal/pkg/middleware/validate"
-	"github.com/mindmatterlab/go-pro/internal/usercenter/locales"
-	"github.com/mindmatterlab/go-pro/pkg/authn"
-	"github.com/mindmatterlab/go-pro/pkg/i18n"
-	"github.com/mindmatterlab/go-pro/pkg/log"
+	gmetrics "github.com/mindmatterlab/acex/internal/pkg/metrics"
+	"github.com/mindmatterlab/acex/internal/pkg/middleware/authn/jwt"
+	i18nmw "github.com/mindmatterlab/acex/internal/pkg/middleware/i18n"
+	"github.com/mindmatterlab/acex/internal/pkg/middleware/logging"
+	"github.com/mindmatterlab/acex/internal/pkg/middleware/tracing"
+	"github.com/mindmatterlab/acex/internal/pkg/middleware/validate"
+	"github.com/mindmatterlab/acex/internal/usercenter/locales"
+	"github.com/mindmatterlab/acex/pkg/authn"
+	"github.com/mindmatterlab/acex/pkg/i18n"
+	"github.com/mindmatterlab/acex/pkg/log"
 )
 
 // ProviderSet defines a wire provider set.

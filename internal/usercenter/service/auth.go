@@ -7,8 +7,8 @@ import (
 
 	"github.com/go-kratos/kratos/v2/errors"
 
-	v1 "github.com/mindmatterlab/go-pro/pkg/api/usercenter/v1"
-	"github.com/mindmatterlab/go-pro/pkg/api/zerrors"
+	v1 "github.com/mindmatterlab/acex/pkg/api/usercenter/v1"
+	"github.com/mindmatterlab/acex/pkg/api/zerrors"
 )
 
 // Login authenticates the user credentials and returns a token on success.

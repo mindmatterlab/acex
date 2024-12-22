@@ -6,17 +6,17 @@
 # Includes
 
 # include the common make file
-ifeq ($(origin GOPRO_ROOT),undefined)
-GOPRO_ROOT :=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
+ifeq ($(origin ACEX_ROOT),undefined)
+ACEX_ROOT :=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 endif
 
 # ==============================================================================
 # Build options
 #
-GOPRO_SRC_PATH :=github.com/mindmatterlab/go-pro
+ACEX_SRC_PATH :=github.com/mindmatterlab/acex
 
 ifeq ($(origin OUTPUT_DIR),undefined)
-OUTPUT_DIR := $(GOPRO_ROOT)/_output
+OUTPUT_DIR := $(ACEX_ROOT)/_output
 $(shell mkdir -p $(OUTPUT_DIR))
 endif
 
@@ -42,6 +42,6 @@ else
 	IMAGE_PLAT := $(PLATFORM)
 endif
 
-MANIFESTS_DIR=$(GOPRO_ROOT)/manifests
-SCRIPTS_DIR=$(GOPRO_ROOT)/scripts
-APIROOT ?= $(GOPRO_ROOT)/pkg/api
+MANIFESTS_DIR=$(ACEX_ROOT)/manifests
+SCRIPTS_DIR=$(ACEX_ROOT)/scripts
+APIROOT ?= $(ACEX_ROOT)/pkg/api

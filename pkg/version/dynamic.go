@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"sync/atomic"
 
-	utilversion "github.com/mindmatterlab/go-pro/pkg/util/version"
+	utilversion "github.com/mindmatterlab/acex/pkg/util/version"
 )
 
 var dynamicGitVersion atomic.Value
